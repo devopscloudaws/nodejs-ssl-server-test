@@ -23,3 +23,8 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`[Version ${version}]: Server running at http://${hostname}:${port}/`);
 })
+
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
